@@ -117,7 +117,8 @@ def ensure_dirs(path):
 def retrive_esm1b_embedding(fasta_name):
     esm_script = "esm/scripts/extract.py"
     esm_out = "data/esm_data"
-    esm_type = "esm1b_t33_650M_UR50S"
+    # esm_type = "esm1b_t33_650M_UR50S"
+    esm_type = "esm2_t48_15B_UR50D"
     fasta_name = "data/" + fasta_name + ".fasta"
     command = ["python", esm_script, esm_type, 
               fasta_name, esm_out, "--include", "mean"]
